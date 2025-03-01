@@ -1,3 +1,6 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 print("WELCOME TO STUDENT INFORMATION MANAGEMENT SYSTEM OF GRD 11 2024 - 25")
 
@@ -116,6 +119,16 @@ elif folders == "Marks":
         avg = (eng+ phy or acc + chem or bs + math or eco or bio + cs or psy or pnt or pe or bio2 + ai or mar or skill)/6
         print ("The student's percentage is:", avg)
 
+        plt.title = ("Marksheet of PreMidTerm")
+        colours = np.array([0,10,20,30,40, 45])
+        subs = ["English", "Core1", "Core2", "Core3", "5th Sub", "Skill"]
+        plt.scatter(subs, marksheet,c= colours ,cmap= "viridis")
+        plt.xticks(rotation = 45)
+        plt.xlabel = ("Subjects")
+        plt.ylabel = ("Marks")
+        plt.show()
+
+
     if Mark_fold == "2":
             print("Welcome to Marksheet of Midterm Assessment for", stud_nm)
             if stud_stream == "PCM":
@@ -159,6 +172,16 @@ elif folders == "Marks":
             print ("The marks scored by the student (English, stream, 5th, skill order) are:", marksheet)
             avg = (((eng*100)/80)+ ((phy*100)/70) or ((acc*100)/80) + ((chem*100)/70) or ((bs*100)/80) + ((math*100)/80) or ((eco*100)/80) or ((bio*100)/70) + ((cs*100)/70) or ((psy*100)/70) or ((pnt*100)/30) or ((pe*100)/70) or ((bio2*100)/70) + ((ai*100)/50) or ((mar*100)/50) or skill)/6
             print ("The student's percentage is:", avg)
+
+            plt.title = ("Marksheet of MidTerm")
+            colours = np.array([0,10,20,30,40, 45])
+            subs = ["English", "Core1", "Core2", "Core3", "5th Sub", "Skill"]
+            plt.scatter(subs, marksheet,c= colours ,cmap= "viridis")
+            plt.xticks(rotation = 45)
+            plt.xlabel = ("Subjects")
+            plt.ylabel = ("Marks")
+            plt.show()
+
 
     if Mark_fold == "3":
             print("Welcome to Marksheet of Pre Midterm Assessment 2 for", stud_nm)
@@ -204,6 +227,15 @@ elif folders == "Marks":
             avg = (eng+ phy or acc + chem or bs + math or eco or bio + cs or psy or pnt or pe or bio2 + ai or mar or skill)/6
             print ("The student's percentage is:", avg)
 
+            plt.title = ("Marksheet of PostMidTerm")
+            colours = np.array([0,10,20,30,40, 45])
+            subs = ["English", "Core1", "Core2", "Core3", "5th Sub", "Skill"]
+            plt.scatter(subs, marksheet,c= colours ,cmap= "viridis")
+            plt.xticks(rotation = 45)
+            plt.xlabel = ("Subjects")
+            plt.ylabel = ("Marks")
+            plt.show()
+
     if Mark_fold == "4":
             print("Welcome to Marksheet of Annual Assessment for", stud_nm)
             if stud_stream == "PCM":
@@ -247,6 +279,16 @@ elif folders == "Marks":
             print ("The marks scored by the student (English, stream, 5th, skill order) are:", marksheet)
             avg = (((eng*100)/80)+ ((phy*100)/70) or ((acc*100)/80) + ((chem*100)/70) or ((bs*100)/80) + ((math*100)/80) or ((eco*100)/80) or ((bio*100)/70) + ((cs*100)/70) or ((psy*100)/70) or ((pnt*100)/30) or ((pe*100)/70) or ((bio2*100)/70) + ((ai*100)/50) or ((mar*100)/50) or skill)/6
             print ("The student's percentage is:", avg)
+
+            plt.title = ("Marksheet of Final Assessment")
+            colours = np.array([0,10,20,30,40, 45])
+            subs = ["English", "Core1", "Core2", "Core3", "5th Sub", "Skill"]
+            plt.scatter(subs, marksheet,c= colours ,cmap= "viridis")
+            plt.xticks(rotation = 45)
+            plt.xlabel = ("Subjects")
+            plt.ylabel = ("Marks")
+            plt.show()
+
     
 elif folders == "Attendance":
     attendance_records = {}
